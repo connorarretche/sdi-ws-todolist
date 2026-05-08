@@ -1,6 +1,7 @@
 //
 const formInput = document.getElementById("add-item-form");
-const unorderedList = document.getElementById("item-list");
+const newItemList = document.getElementById("item-list");
+const completedList = document.getElementById("item-done");
 
 
 formInput.addEventListener("submit", (event) => {
@@ -12,9 +13,26 @@ formInput.addEventListener("submit", (event) => {
     let listXbutton = document.createElement("button")
     listXbutton.textContent = "X";
     listXbutton.className = "delete-btn";
+
+    listXbutton.addEventListener("click", () => handleDelete(newListItem));
+
     newListItem.textContent = userInput;
     newListItem.appendChild(listXbutton);
-    unorderedList.appendChild(newListItem);
+    newItemList.appendChild(newListItem);
 
     event.target.reset();
 });
+
+let handleDelete = (newItem) => {
+    completedList.appendChild(newItem);
+    newItem.classList.toggle("strike-text");
+    let delButton = newItem.querySelector('.delete-btn');
+    delButton.remove();
+    let removeButton = document.createElement("button")
+    removeButton.textContent = "X";
+    removeButton.className = "remove-btn";
+    newItem.appendChild(removeButton);
+
+    removeButton.addEventListener("click", () => newItem.remove());
+
+}
