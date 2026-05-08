@@ -1,0 +1,25 @@
+{
+  "name": "sdi-ws-todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorArretche/sdi-ws-toDoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ConnorArretche/sdi-ws-toDoList/issues"
+  },
+  "homepage": "https://github.com/ConnorArretche/sdi-ws-toDoList#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
